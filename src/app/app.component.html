@@ -1,0 +1,14 @@
+<div class="wrapper" [formGroup]="form">
+  <header>
+    <label for="select">Select time interval</label>
+    <select id="select" formControlName="timeInterval">
+      <option *ngFor="let value of timeIntervalValues" [value]="value.time">{{value.value}}</option>
+    </select>
+  </header>
+  <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="virtual-container-wrapper">
+    <div class="column" *cdkVirtualFor="let data of gridData | filterPipe : timeInterval.value">
+      <div class="cell">{{data.time | timeFormat}}</div>
+      <div class="cell">{{data.value}}</div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>

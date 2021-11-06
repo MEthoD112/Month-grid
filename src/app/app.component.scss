@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 20px;
+  header {
+    margin-bottom: 30px;
+    label {
+      margin-right: 20px;
+    }
+  }
+  .virtual-container-wrapper {
+    height: 150px;
+    .column {
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+      border-right: 1px solid black;
+      &:first-of-type {
+        border-left: 1px solid black;
+      }
+    }
+    .cell {
+      text-align: center;
+      padding: 10px;
+      white-space: nowrap;
+      &:first-of-type {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+::ng-deep {
+  .cdk-virtual-scroll-viewport.virtual-container-wrapper {
+    .cdk-virtual-scroll-content-wrapper {
+      display: flex;
+      min-height: unset;
+    }
+  }
+}

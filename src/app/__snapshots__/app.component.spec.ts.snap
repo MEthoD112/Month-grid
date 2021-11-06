@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should create the app 1`] = `
+<app-root
+  form={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  gridData={[Function Array]}
+  timeIntervalValues={[Function Array]}
+>
+  <div
+    class="wrapper"
+  >
+    <header>
+      <label
+        for="select"
+      >
+        Select time interval
+      </label>
+      <select
+        formcontrolname="timeInterval"
+        id="select"
+      >
+      </select>
+    </header>
+    <cdk-virtual-scroll-viewport
+      class="virtual-container-wrapper cdk-virtual-scroll-viewport"
+      itemsize="50"
+      orientation="horizontal"
+    >
+      <div
+        class="cdk-virtual-scroll-content-wrapper"
+      >
+      </div>
+      <div
+        class="cdk-virtual-scroll-spacer"
+      />
+    </cdk-virtual-scroll-viewport>
+  </div>
+</app-root>
+`;
